@@ -5,7 +5,6 @@ pipeline {
         jdk 'jdk17'
         maven 'maven3'
     }
-
     stages {
         
         stage('Compile') {
@@ -19,7 +18,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        
+    
         stage('Build') {
             steps {
                 sh 'mvn package'
